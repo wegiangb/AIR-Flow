@@ -1,0 +1,31 @@
+{
+  "name": "air-flow",
+  "version": "1.0.0",
+  "description": "AirFlow processes physiological data from experiments.",
+  "main": "server.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrexelAIRLab/AIR-Flow.git"
+  },
+  "keywords": [
+    "brain",
+    "computer",
+    "air",
+    "proto"
+  ],
+  "author": "Anish Basu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrexelAIRLab/AIR-Flow/issues"
+  },
+  "homepage": "https://github.com/DrexelAIRLab/AIR-Flow#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "pg-promise": "^3.1.7"
+  }
+}
