@@ -1,7 +1,7 @@
 var queries = require('../db/queries.js');
 var bodyParser = require('body-parser');
 module.exports = function(app){
-    var urlEnc = bodyParser.urlencoded();
+    var urlEnc = bodyParser.urlencoded({extended: true});
     /*
     app.get('/', function(req,res) {
         res.render('index',{});
@@ -31,6 +31,12 @@ module.exports = function(app){
 
     app.post('/subject/:id/getData.json', urlEnc, function (req,res) {
         req.db.any(queries.get_raw_data_by_channel, {channel: req.body.channel, subject: req.params.id}).then(function (data) {
+            res.json(data);
+         });
+    });
+
+    app.get('/subject/:id/getStimulus.json', urlEnc, function (req,res) {
+         req.db.any(queries.get_stim, {subject: req.params.id}).then(function (data) {
             res.json(data);
          });
     });

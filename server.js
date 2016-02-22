@@ -11,7 +11,7 @@ require('./app/routes/routes.js')(app);
 
 app.listen(config.port);
 
-console.log('🌏 => Running on localhost:'+config.port);
+console.log('🌏  => Running on localhost:'+config.port);
 
 
 //Database Middleware
